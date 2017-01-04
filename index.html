@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class=''>
+<head>
+<meta charset='UTF-8'>
+	<link rel="stylesheet" type="text/css" href="stile.css">
+    <script src='gauge.js'></script>
+	<script src='script.js'></script>
+</head>
+<body onload ="LerSensores();">
+	<table align=center>
+  	<tr>
+    	<td>	<div id="gauge3" class="gauge-container six">
+					<script>
+						var gauge3 = Gauge(document.getElementById('gauge3'), {
+			    		max: 100,
+			    		value: 50,
+			    		dialEndAngle: 180,
+			    		dialStartAngle: 100,
+			    		label:	function(value) {
+			      						return value + "ºC ";
+			    						}
+						});
+					</script>
+					</div>
+			</td>
+			<td>	<div id="gauge2" class="gauge-container two">
+							<script>
+								var gauge2 = Gauge(document.getElementById('gauge2'), {
+									max: 100,
+									value: 50,
+									dialEndAngle: 180,
+									dialStartAngle: 100,
+									label:	function(value) {
+														return value + "% ";
+													}
+								});
+							</script>
+						</div>
+				</td>
+  	</tr>
+		<tr>
+			<td align=center ><h2>Temperatura</h2></td>
+			<td align=center ><h2>Umidade</h2></td>
+		</tr>
+		<tr>
+			<td align=center colspan="2" >
+				<div id="botao1" onclick="BotaoCarga1()";>
+					<p class="carga">LED</p>
+				</div>
+			</td>
+		</tr>
+		<tr>
+
+		</tr>
+	</table>
+
+</body>
+
+</html>
